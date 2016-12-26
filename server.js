@@ -19,5 +19,10 @@ server.use(bodyParser.urlencoded({ extended: true }))
 
 // Routes
 
-server.get('/', index.get)
-
+server.get('/users', index.get)
+server.get('/users/new', index.add)
+server.post('/users/submit', index.submit)
+server.get('/edit/:id', index.edit)
+server.post('/edit/submit/:id', index.submitEdit)
+server.get('/users/confirm/:id', index.confirm)
+server.post('/users/delete/:id', index.delete)

@@ -6,7 +6,15 @@
   <body>
     <ul>
     {{#each users}}
-      <li>{{name}} ({{email}})</li>
+      <li>
+				{{name}} ({{email}})
+				<form action="/edit/{{id}}" method="get">
+					<input type="submit" value="Edit">
+				</form>
+				<form action="/users/confirm/{{id}}" method="get">
+    			<input type="submit" value="Delete">
+				</form>
+			</li>
     {{/each}}
     </ul>
   </body>

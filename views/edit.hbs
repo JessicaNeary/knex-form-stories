@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit user {{id}}</title>
+  </head>
+  <body>
+		<h1>{{name}}</h1>
+		<h3>{{email}}</h3>
+		<h3>{{id}}</h3>
+    <form class="editUser" action="/edit/submit/{{id}}" method="post">
+    	<input type="text" name="name" value={{name}}>
+    	<input type="text" name="email" value={{email}}>
+    	<input type="text" name="id" value={{id}}>
+			<button type="submit" name="submit">Submit</button>
+    </form>
+  </body>
+</html>

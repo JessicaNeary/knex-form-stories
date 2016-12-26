@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Confirm deletion</title>
+  </head>
+  <body>
+		<h1>Are you sure you want to delete the following user?</h1>
+		<h2>{{name}}</h2>
+		<h3>{{email}}</h3>
+		<h3>{{id}}</h3>
+    <form action="/users/delete/{{id}}" method="post">
+			<button type="submit" name="confirmDelete">Yes, delete user {{id}}</button>
+    </form>
+  </body>
+</html>
